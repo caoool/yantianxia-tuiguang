@@ -6,7 +6,7 @@ import QRCode from 'qrcode-react'
 
 class App extends Component {
     state = {
-        loggedIn: true,
+        loggedIn: Meteor.userId() ? true : false,
         promotionUrl: `${window.location.origin}/promote/${Meteor.userId()}`,
         oldPassword: '',
         password: '',
